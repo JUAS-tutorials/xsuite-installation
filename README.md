@@ -1,93 +1,147 @@
-# juas-longitudinal-installation
+# Installation instructions for the JUAS longitudinal beam dynamics tutorial
+
+The tutorial will use the [Xsuite](https://xsuite.readthedocs.io/en/latest/) package collection.
+Xsuite is a tracking code written in Python, that can exploit the CPU and GPU capabilities to track particles in a complex lattice, including non-linear effects, collimation devices, collective effects etc.
+
+A recent version of Python is needed, and for a clean installation we will use [Miniforge](https://github.com/conda-forge/miniforge/), to manage the python and packages installation.
+
+## Installation on Linux
+
+### 1. Install Miniforge
+- Open a terminal and download the Minforge for Linux (version as of 2024-12-30)
+    - `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
+- Make the file executable and run it
+    - `chmod +x Miniforge3-Linux-x86_64.sh`
+    - `./Miniforge3-Linux-x86_64.sh`
+    - Accept the license agreement
+    - Change the installation directory if you want, or keep the default
+    - At the end of installation, say `yes` to the automatic initialization of the shell with conda
+
+### 2. Create a dedicated conda environment
+
+Once miniforge has been installed, we create an environment that will contain all the packages we will install.
+
+- Create a conda environment called `py312juas`, that will use Python 3.12, and activate it
+  - `conda create -n py312juas python=3.12`
+  - `conda activate py312juas`
+- Install commonly used packages, jupyter (for interactive notebooks) and xsuite
+  - `conda install numpy scipy matplotlib pandas ipython pytest`
+  - `conda install jupyter ipympl`
+  - `pip install xsuite`
+
+### 3. Test your installation
+
+There are several options available to open, edit and run notebooks:
+
+#### Option 1 : Jupyter notebook
+
+- Open a terminal and launch jupyter
+  - `jupyter lab`
+- A page should have automatically in your web browser, open the URL that is given in the
+  - It looks like this: `http://localhost:8889/lab?token=e9049324df5685f10fd5b7805cd4da36be67d69837119062`
+- Open the `test_installation.ipynb` notebook and run it
+  - If the installation is OK, all cell should run and no error should appear
+
+#### Option 2 : VSCode
+- Download from https://code.visualstudio.com/download
+- Install VSCode, run it and add the Python and Jupyter extensions to it
+- Open the folder where the notebook `test_installation.ipynb` is located
+- Open the notebook, on the top right click "Select Kernel", then "Python Environment" and "py312juas" kernel
+- If the installation is OK, all cell should run and no error should appear
 
 
+## Installation on Windows using Windows Subsystem for Linux (WSL)
 
-## Getting started
+### 1. Installing WSL, Miniforge and Xsuite
+- Open a command prompt or a Power Shell in administrator mode
+- Run `wsl --install`
+- Reboot the system to finalize the installation
+- From the application menu, launch the app `Ubuntu` **as administrator**
+    - A console will appear, finalizing the installation
+    - Provide a Unix username and its associated password
+    - The terminal will become the Ubuntu one, you now have a Linux system
+- In the Ubuntu terminal, run `sudo apt install ca-certificates wget`. This installs the tools to download files directly from the terminal
+- Download the Minforge for Linux (version as of 2024-12-30)
+    - `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
+- Make the file executable and run it
+    - `chmod +x Miniforge3-Linux-x86_64.sh`
+    - `./Miniforge3-Linux-x86_64.sh`
+    - Accept the license agreement
+    - Change the installation directory if you want, or keep the default
+    - At the end of installation, say `yes` to the automatic initialization of the shell with conda
+- Install commonly used packages, jupyter and xsuite
+  - `conda install numpy scipy matplotlib pandas ipython pytest`
+  - `conda install jupyter ipympl`
+  - `pip install xsuite`
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### 2. Test your installation
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Several options are available to open, edit and run notebooks:
 
-## Add your files
+### Option 1: Jupyter Lab
+- In the Ubuntu terminal, go to the folder where the notebook `test_installation.ipynb` is located
+    - Windows folder are availaible under /mnt (=mounts). The `C:\` drive is under `/mnt/c/`
+    - For example the user folder is `cd /mnt/c/<WINDOWS USER NAME>/JUAS/juas-longitudinal-installation`
+- Run `jupyter lab` and open in a browser the link given in the terminal window
+- In Jupyter Lab, go to the notebook location, open it and run it.
+- If the installation is OK, the notebook should run without errors.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+### Option 2: VSCode, and connecting it to the WSL
+Instructions are taken from https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode
+- Download and install VSCode (the Microsoft version, not the Linux one) from https://code.visualstudio.com/download
+- During install: "When prompted to Select Additional Tasks during installation, be sure to check the Add to PATH option so you can easily open a folder in WSL using the code command. " (from documentation)
+- Once the install is finished, launch VSCode. In the left side panel, go to "Extensions" and install the "Remote Development"
+- Open the command palette of VSCode (`Shift+Ctrl+P`) and type `WSL`. Several command appear, select `WSL: Connect to WSL`
+- You now have VSCode running with the Linux subsystem. Add the folder where you have the notebooks to the editor (File>Open folder or `Ctrl+K Ctrl+O`). The Windows folder are mounted on the WSL at `/mnt/`. The Windows user directory is at `/mnt/c/<WINDOWS USER NAME>/`
+- Install the extensions for VSCode 'Python' and 'Jupyter' (if you open a notebook)
+- Open a notebook and on the top right click "Select Kernel" (if you didn't install the extensions, you will be prompted at this moment).
+- Select the "Python Environment" and then the "base kernel"
+- You can now run the notebook!
 
-```
-cd existing_repo
-git remote add origin https://gitlab.cern.ch/damorim/juas-longitudinal-installation.git
-git branch -M master
-git push -uf origin master
-```
+### Option 3: Spyder
+- In the Ubuntu terminal, run `conda install spyder-notebook`
+- Launch `spyder` from the terminal
+- Open the notebook with the notebook pane of spyder (by default it should appear on the right hand of the window)
+- Run the notebook!
 
-## Integrate with your tools
+## Installation on macOS
 
-- [ ] [Set up project integrations](https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/settings/integrations)
+Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/latest/installation.html#install-miniforge
 
-## Collaborate with your team
+### 1. Installing Miniforge and Xsuite
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+- Download and launch the miniforge installer for the macOS version you have:
+    - `curl -OL https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh`
+    - `bash Miniforge3-MacOSX-$(uname -m).sh`
+- Activate the environment
+    - `source miniforge3/bin/activate`
+- Create a new environment and activate it
+    - `conda create -n py312juas python=3.12`
+    - `conda activate py312juas`
+- Install the compilers
+    - `conda install compilers`
+- Install all useful packages, and Xsuite
+    - `pip install numpy scipy matplotlib pandas ipython pytest`
+    - `pip install jupyter ipympl # to use jupyter notebooks (optional)`
+    - `pip install cpymad # to load MAD-X lattices (optional)`
+    - `pip install xsuite`
 
-## Test and Deploy
+### 2. Test your installation
 
-Use the built-in continuous integration in GitLab.
+Several options are available to open, edit and run notebooks:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+#### Option 1 : Jupyter notebook
 
-***
+- Open a terminal and launch jupyter
+  - `jupyter lab`
+- A page should have automatically in your web browser, open the URL that is given in the
+  - It looks like this: `http://localhost:8889/lab?token=e9049324df5685f10fd5b7805cd4da36be67d69837119062`
+- Open the `test_installation.ipynb` notebook and run it
+  - If the installation is OK, all cell should run and no error should appear
 
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+#### Option 2 : VSCode
+- Download from https://code.visualstudio.com/download
+- Install VSCode, run it and add the Python and Jupyter extensions to it
+- Open the folder where the notebook `test_installation.ipynb` is located
+- Open the notebook, on the top right click "Select Kernel", then "Python Environment" and "py312juas" kernel
+- If the installation is OK, all cell should run and no error should appear
