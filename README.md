@@ -133,10 +133,10 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
     - `conda install compilers`
     - The terminal might ask for "command line developers tools". Say Yes to their Installation
 - Install all useful packages, and Xsuite
-    - `pip install numpy scipy matplotlib pandas ipython pytest`
-    - `pip install jupyter ipympl # to use jupyter notebooks (optional)`
-    - `pip install cpymad # to load MAD-X lattices (optional)`
-    - `pip install xsuite`
+  - `conda install numpy scipy matplotlib pandas ipython pytest`
+  - `conda install jupyter ipympl` to install the notebook server
+  - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
+  - `pip install xsuite`
 
 ### 2. Test your installation
 
