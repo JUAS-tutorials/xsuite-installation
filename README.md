@@ -118,16 +118,20 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
 
 ### 1. Installing Miniforge and Xsuite
 
+- Open a terminal
 - Download and launch the miniforge installer for the macOS version you have:
     - `curl -OL https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh`
     - `bash Miniforge3-MacOSX-$(uname -m).sh`
-- Activate the environment
-    - `source miniforge3/bin/activate`
+    - Accept the license agreement
+    - Change the installation directory if you want, or keep the default
+    - At the end of installation, say `yes` to the automatic initialization of the shell with conda
+    - Close the terminal and reopen it
 - Create a new environment and activate it
     - `conda create -n py312juas python=3.12`
     - `conda activate py312juas`
 - Install the compilers
     - `conda install compilers`
+    - The terminal might ask for "command line developers tools". Say Yes to their Installation
 - Install all useful packages, and Xsuite
     - `pip install numpy scipy matplotlib pandas ipython pytest`
     - `pip install jupyter ipympl # to use jupyter notebooks (optional)`
