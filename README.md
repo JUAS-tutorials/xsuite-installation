@@ -64,13 +64,14 @@ Even if you already have installed a python distribution under Windows (for exam
 ### 1. Installing WSL, Miniforge and Xsuite
 - Open a command prompt or a Power Shell in administrator mode
 - Run `wsl --install`
+  - This will take some time, ensure you have a good internet connection
 - Reboot the system to finalize the installation
 - From the application menu, launch the app `Ubuntu` **as administrator**
     - A console will appear, finalizing the installation
     - Provide a Unix username and its associated password
     - The terminal will become the Ubuntu one, you now have a Linux system
 - In the Ubuntu terminal, run `sudo apt install ca-certificates wget`. This installs the tools to download files directly from the terminal
-- Download the Minforge for Linux (version as of 2024-12-30)
+- Download the Miniforge for Linux (version as of 2024-12-30)
     - `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
 - Make the file executable and run it
     - `chmod +x Miniforge3-Linux-x86_64.sh`
