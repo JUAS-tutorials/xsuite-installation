@@ -5,6 +5,11 @@ Xsuite is a tracking code written in Python, that can exploit the CPU and GPU ca
 
 A recent version of Python is needed, and for a clean installation we will use [Miniforge](https://github.com/conda-forge/miniforge/), to manage the python and packages installation.
 
+## Summary
+- [Installation on Linux](#installation-on-linux)
+- [Installation on Windows](#installation-on-windows)
+- [Installation on macOS](#installation-on-macos)
+
 ## Installation on Linux
 
 ### 1. Install Miniforge
@@ -50,7 +55,10 @@ There are several options available to open, edit and run notebooks:
 - If the installation is OK, all cell should run and no error should appear
 
 
-## Installation on Windows using Windows Subsystem for Linux (WSL)
+## Installation on Windows
+
+This installation will use the Windows Subsystem for Linux (WSL).
+Even if you already have installed a python distribution under Windows (for example the Anaconda installer), you still need to follow these instructions as the installation of Xsuite directly under Windows is not possible, a linux kernel is required. 
 
 ### 1. Installing WSL, Miniforge and Xsuite
 - Open a command prompt or a Power Shell in administrator mode
