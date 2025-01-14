@@ -133,7 +133,7 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
     - `conda install compilers`
     - The terminal might ask for "command line developers tools". Say Yes to their Installation
 - Install all useful packages, and Xsuite
-  - `conda install numpy scipy matplotlib pandas ipython pytest`
+  - `conda install numpy scipy matplotlib pandas ipython pytest PyQt5`
   - `conda install jupyter ipympl` to install the notebook server
   - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
@@ -143,11 +143,11 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
 Several options are available to open, edit and run notebooks:
 
 #### Option 1 : Jupyter notebook
-
+- Download the test notebook from the repos`https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
 - Open a terminal and launch jupyter
   - `jupyter lab`
-- A page should have automatically in your web browser, open the URL that is given in the
-  - It looks like this: `http://localhost:8889/lab?token=e9049324df5685f10fd5b7805cd4da36be67d69837119062`
+- A page should have open automatically in your web browser
+  - If the page did not open, there is `http://localhost:8889/lab?token=e9049324df5685f10fd5b7805cd4da36be67d69837119062`
 - Open the `test_installation.ipynb` notebook and run it
   - If the installation is OK, all cell should run and no error should appear
 
@@ -157,3 +157,7 @@ Several options are available to open, edit and run notebooks:
 - Open the folder where the notebook `test_installation.ipynb` is located
 - Open the notebook, on the top right click "Select Kernel", then "Python Environment" and "py312juas" kernel
 - If the installation is OK, all cell should run and no error should appear
+
+## Remarks and troubleshooting
+
+- When you open a new terminal, the default python environment is the default one. You need to reactivate the `py312juas` environment each time: `conda activate py312juas`
