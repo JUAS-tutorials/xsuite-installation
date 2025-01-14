@@ -127,7 +127,7 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
     - Accept the license agreement
     - Change the installation directory if you want, or keep the default
     - At the end of installation, say `yes` to the automatic initialization of the shell with conda
-    - Close the terminal and reopen it
+- Close the terminal and reopen it
 - Create a new environment and activate it
     - `conda create -n py312juas python=3.12`
     - `conda activate py312juas`
@@ -149,7 +149,7 @@ Several options are available to open, edit and run notebooks:
 - Open a terminal and launch jupyter
   - `jupyter lab`
 - A page should have open automatically in your web browser
-  - If the page did not open, there is `http://localhost:8889/lab?token=e9049324df5685f10fd5b7805cd4da36be67d69837119062`
+  - If the page did not open, there is a link inside the terminal that looks like this: `http://localhost:8889/lab?token=abcdef123456789etc`
 - Open the `test_installation.ipynb` notebook and run it
   - If the installation is OK, all cell should run and no error should appear
 
