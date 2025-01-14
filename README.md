@@ -21,6 +21,7 @@ A recent version of Python is needed, and for a clean installation we will use [
     - Accept the license agreement
     - Change the installation directory if you want, or keep the default
     - At the end of installation, say `yes` to the automatic initialization of the shell with conda
+- Close the terminal and reopen it to make the change effective
 
 ### 2. Create a dedicated conda environment
 
@@ -77,6 +78,7 @@ Even if you already have installed a python distribution under Windows (for exam
     - Accept the license agreement
     - Change the installation directory if you want, or keep the default
     - At the end of installation, say `yes` to the automatic initialization of the shell with conda
+- Close the terminal and reopen it to make the change effective
 - Install commonly used packages, jupyter and xsuite
   - `conda install numpy scipy matplotlib pandas ipython pytest`
   - `conda install jupyter ipympl`
@@ -88,7 +90,7 @@ Several options are available to open, edit and run notebooks:
 
 ### Option 1: Jupyter Lab
 - In the Ubuntu terminal, go to the folder where the notebook `test_installation.ipynb` is located
-    - Windows folder are availaible under /mnt (=mounts). The `C:\` drive is under `/mnt/c/`
+    - Windows folder are available under /mnt (=mounts). The `C:\` drive is under `/mnt/c/`
     - For example the user folder is `cd /mnt/c/<WINDOWS USER NAME>/JUAS/juas-longitudinal-installation`
 - Run `jupyter lab` and open in a browser the link given in the terminal window
 - In Jupyter Lab, go to the notebook location, open it and run it.
