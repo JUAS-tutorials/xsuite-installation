@@ -39,6 +39,8 @@ Once miniforge has been installed, we create an environment that will contain al
 
 ### 3. Test your installation
 
+Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
+
 There are several options available to open, edit and run notebooks:
 
 #### Option 1 : Jupyter notebook
@@ -88,6 +90,8 @@ Even if you already have installed a python distribution under Windows (for exam
   - `pip install xsuite`
 
 ### 2. Test your installation
+
+Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
 
 Several options are available to open, edit and run notebooks:
 
@@ -144,6 +148,8 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
   - `pip install xsuite`
 
 ### 2. Test your installation
+
+Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
 
 Several options are available to open, edit and run notebooks:
 
