@@ -9,6 +9,8 @@ A recent version of Python is needed, and for a clean installation we will use [
 - [Installation on Linux](#installation-on-linux)
 - [Installation on Windows](#installation-on-windows)
 - [Installation on macOS](#installation-on-macos)
+- [Remarks and troubleshooting](#remarks-and-troubleshooting)
+- [Screenshots of editors](#screenshots-of-editors)
 
 ## Installation on Linux
 
@@ -93,7 +95,7 @@ Several options are available to open, edit and run notebooks:
 - In the Ubuntu terminal, go to the folder where the notebook `test_installation.ipynb` is located
     - Windows folder are available under /mnt (=mounts). The `C:\` drive is under `/mnt/c/`
     - For example the user folder is `cd /mnt/c/<WINDOWS USER NAME>/JUAS/juas-longitudinal-installation`
-- Run `jupyter lab` and open in a browser the link given in the terminal window
+- Run `jupyter lab` and open in a web browser the link given in the terminal window (you can Ctrl+click it)
 - In Jupyter Lab, go to the notebook location, open it and run it.
 - If the installation is OK, the notebook should run without errors.
 
@@ -163,4 +165,33 @@ Several options are available to open, edit and run notebooks:
 
 ## Remarks and troubleshooting
 
-- When you open a new terminal, the default python environment is the default one. You need to reactivate the `py312juas` environment each time: `conda activate py312juas`
+- (Linux, macOS) When you open a new terminal, the default python environment is the default one. You need to reactivate the `py312juas` environment each time: `conda activate py312juas`
+
+- (Windows) To paste content in the Ubuntu terminal, you need to use the right click of the mouse (Ctrl+V does not work).
+
+## Screenshots of editors
+
+<details>
+<summary>Jupyter interface</summary>
+
+The default jupyter interface is shown below. The notebook view is on the right hand side of the window. The left hand side is the file browser. On top of the notebook view, there is a toolbar to run the notebook.
+![jupyter-interface](doc/jupyter_interface.png)
+
+</details>
+
+
+<details>
+<summary>Spyder interface</summary>
+
+The default spyder interface is shown below. The notebook view is on the right hand side of the window.
+![spyder-interface](doc/spyder_interface.png)
+
+To open a notebook, click on the hamburger icon on the right hand side of the window, browse files and select the notebook you want to open.
+![spyder-open-file](doc/spyder_interface_open.png)
+
+The editor is not needed, you can close it by clicking on the hamburger menu on the top right of the editor.
+![spyder-close-editor](doc/spyder_close_editor.png)
+
+The notebook view is now the main view of the Spyder window. The toolbar on top allows to run the notebook.
+![spyder-notebook-view](doc/spyder_notebook_view.png)
+</details>
