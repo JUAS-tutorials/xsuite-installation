@@ -33,8 +33,9 @@ Once miniforge has been installed, we create an environment that will contain al
   - `conda create -n py312juas python=3.12`
   - `conda activate py312juas`
 - Install commonly used packages, jupyter (for interactive notebooks) and xsuite
-  - `conda install numpy scipy matplotlib pandas ipython pytest`
-  - `conda install jupyter ipympl`
+  - `pip install numpy scipy matplotlib pandas ipython pytest`
+  - `pip install jupyter ipympl`
+  - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
 
 ### 3. Test your installation
@@ -85,8 +86,9 @@ Even if you already have installed a python distribution under Windows (for exam
     - At the end of installation, say `yes` to the automatic initialization of the shell with conda
 - Close the terminal and reopen it to make the change effective
 - Install commonly used packages, jupyter and xsuite
-  - `conda install numpy scipy matplotlib pandas ipython pytest`
-  - `conda install jupyter ipympl`
+  - `pip install numpy scipy matplotlib pandas ipython pytest`
+  - `pip install jupyter ipympl`
+  - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
 
 ### 2. Test your installation
@@ -139,11 +141,11 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
     - `conda create -n py312juas python=3.12`
     - `conda activate py312juas`
 - Install the compilers
-    - `conda install compilers`
+    - `pip install compilers`
     - The terminal might ask for "command line developers tools". Say Yes to their Installation
 - Install all useful packages, and Xsuite
-  - `conda install numpy scipy matplotlib pandas ipython pytest PyQt5`
-  - `conda install jupyter ipympl` to install the notebook server
+  - `pip install numpy scipy matplotlib pandas ipython pytest PyQt5`
+  - `pip install jupyter ipympl` to install the notebook server
   - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
 
