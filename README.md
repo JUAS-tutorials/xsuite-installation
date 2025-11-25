@@ -37,6 +37,7 @@ Once miniforge has been installed, we create an environment that will contain al
   - `pip install jupyter ipympl`
   - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
+  - `pip install xplt[recommended]` to install plotting library for Xsuite
 
 ### 3. Test your installation
 
