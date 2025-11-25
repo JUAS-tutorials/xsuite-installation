@@ -91,6 +91,7 @@ Even if you already have installed a python distribution under Windows (for exam
   - `pip install jupyter ipympl`
   - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
+  - `pip install xplt[recommended]` to install plotting library for Xsuite
 
 ### 2. Test your installation
 
@@ -149,6 +150,7 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
   - `pip install jupyter ipympl` to install the notebook server
   - `pip install cpymad` to load and manipulate MAD-X lattices (optional)
   - `pip install xsuite`
+  - `pip install xplt[recommended]` to install plotting library for Xsuite
 
 ### 2. Test your installation
 
