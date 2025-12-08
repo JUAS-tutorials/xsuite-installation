@@ -41,7 +41,7 @@ Once miniforge has been installed, we create an environment that will contain al
 
 ### 3. Test your installation
 
-Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
+Download the test notebook from the repository : `https://github.com/amorimd/juas-xsuite-installation/blob/master/test_installation.ipynb`
 
 There are several options available to open, edit and run notebooks:
 
@@ -95,7 +95,7 @@ Even if you already have installed a python distribution under Windows (for exam
 
 ### 2. Test your installation
 
-Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
+Download the test notebook from the repository : ``
 
 Several options are available to open, edit and run notebooks:
 
@@ -154,12 +154,12 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
 
 ### 2. Test your installation
 
-Download the test notebook from the repository : `https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
+Download the test notebook from the repository : `https://github.com/amorimd/juas-xsuite-installation/blob/master/test_installation.ipynb`
 
 Several options are available to open, edit and run notebooks:
 
 #### Option 1 : Jupyter notebook
-- Download the test notebook from the repos`https://gitlab.cern.ch/damorim/juas-longitudinal-installation/-/raw/master/test_installation.ipynb?inline=false`
+- Download the test notebook from the repos`https://github.com/amorimd/juas-xsuite-installation/blob/master/test_installation.ipynb`
 - Open a terminal and launch jupyter
   - `jupyter lab`
 - A page should have open automatically in your web browser
