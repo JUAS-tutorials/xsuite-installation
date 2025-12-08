@@ -15,7 +15,7 @@ A recent version of Python is needed, and for a clean installation we will use [
 ## Installation on Linux
 
 ### 1. Install Miniforge
-- Open a terminal and download the Minforge for Linux (version as of 2024-12-30)
+- Open a terminal and download the latest Miniforge for Linux
     - `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
 - Make the file executable and run it
     - `chmod +x Miniforge3-Linux-x86_64.sh`
@@ -77,7 +77,7 @@ Even if you already have installed a python distribution under Windows (for exam
     - Provide a Unix username and its associated password
     - The terminal will become the Ubuntu one, you now have a Linux system
 - In the Ubuntu terminal, run `sudo apt install ca-certificates wget`. This installs the tools to download files directly from the terminal
-- Download the Miniforge for Linux (version as of 2024-12-30)
+- Download the latest Miniforge for Linux
     - `wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh`
 - Make the file executable and run it
     - `chmod +x Miniforge3-Linux-x86_64.sh`
@@ -132,7 +132,7 @@ Adapted from Xsuite installation instructions: https://xsuite.readthedocs.io/en/
 ### 1. Installing Miniforge and Xsuite
 
 - Open a terminal
-- Download and launch the miniforge installer for the macOS version you have:
+- Download and launch the latest Miniforge installer for the macOS version you have:
     - `curl -OL https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-$(uname -m).sh`
     - `bash Miniforge3-MacOSX-$(uname -m).sh`
     - Accept the license agreement
